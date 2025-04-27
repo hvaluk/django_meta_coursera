@@ -8,8 +8,9 @@ django = "*"
 djangorestframework = "*"
 djangorestframework-xml = "*"
 djoser = "*"
+djangorestframework-simplejwt = "~=5.2.1"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "*"

@@ -1,14 +1,14 @@
-# from django.urls import path
-# from . import views
+from django.urls import path
+from . import views
 
-# urlpatterns = [
-#     path('categories', views.CategoriesView.as_view()),
-#     path('menu-items', views.MenuItemsView.as_view()),
-# ]
+urlpatterns = [
+    path('categories', views.CategoriesView.as_view()),
+    path('menu-items', views.MenuItemsView.as_view()),
+]
 
-from django.urls import path 
-from . import views 
+# from django.urls import path 
+# from . import views 
   
-urlpatterns = [ 
-     path('ratings', views.RatingsView.as_view()), 
-] 
+# urlpatterns = [ 
+#      path('ratings', views.RatingsView.as_view()), 
+# ] 
