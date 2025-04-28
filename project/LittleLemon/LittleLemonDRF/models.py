@@ -45,7 +45,3 @@ class Order(models.Model):
     orderitem = models.ForeignKey(OrderItem, on_delete=models.CASCADE, null=True)
 
 
-# class Rating(models.Model):
-#     menuitem_id = models.SmallIntegerField()
-#     rating = models.SmallIntegerField()
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)

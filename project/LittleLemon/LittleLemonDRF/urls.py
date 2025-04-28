@@ -33,9 +33,3 @@ urlpatterns = [
     # test for serialization of Group
     path('admin/group', views.group_view),
 ]
-# from django.urls import path 
-# from . import views 
-  
-# urlpatterns = [ 
-#      path('ratings', views.RatingsView.as_view()), 
-# ] 
