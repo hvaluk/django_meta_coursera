@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Booking Form</title>
+</head>
+
+<body>
+    <h1>Booking Form</h1>
+    <form id="menuForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('menuForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Create a FormData object from the form
+            const formData = new FormData(form);
+
+            fetch("", {
+                method: "POST",
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                },
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === 'success') {
+                        alert('Success!');
+                        form.reset();
+                    } else {
+                        alert('Error: ' + JSON.stringify(data.errors));
+                    }
+                })
+                .catch(error => {
+                    alert('Network or server error');
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>
