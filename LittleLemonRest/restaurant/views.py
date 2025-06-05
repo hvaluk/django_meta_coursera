@@ -23,6 +23,8 @@ def book(request):
     context = {'form':form}
     return render(request, 'book.html', context)
 
+
+
 # Add code for the bookings() view
 def bookings(request):
     date = request.GET.get('date', datetime.today().date())

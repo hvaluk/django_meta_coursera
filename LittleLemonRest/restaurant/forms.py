@@ -3,5 +3,5 @@ from django import forms
 
 class BookingForm(forms.ModelForm):
     class Meta:
-        Model = Booking
-        Field = "__all__"
+        model = Booking     
+        fields = '__all__'
