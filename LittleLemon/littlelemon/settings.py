@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # The settings for app updated for the Graded assessment
     'restaurant',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # The settings for templates updated for the Graded assessment
-        'DIRS': ['restaurant/templates' ],
+        'DIRS': ['restaurant/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'reservations',
         'HOST' : '127.0.0.1',
         'PORT' : '3306',
-        'USER' : 'admindjango',
-        'PASSWORD' : 'employee@123!',
+        'USER' : 'root',
+        'PASSWORD' : 'root',
     }
 }
 
