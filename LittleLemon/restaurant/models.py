@@ -16,7 +16,9 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booking #{self.pk} for {self.name}"
 
-class Menu(models.Model):
+
+
+class MenuItem(models.Model):
     title = models.CharField(
         max_length=255,
         unique=True,
@@ -31,6 +33,6 @@ class Menu(models.Model):
         validators=[MinValueValidator(1), MaxValueValidator(5)],
         default=1  
     )
-
     def __str__(self):
-        return self.title
+        return f'{self.title} : {self.price}'
+
