@@ -1,3 +1,0 @@
-superuser credentials:
-username: admin1
-password: 1234
